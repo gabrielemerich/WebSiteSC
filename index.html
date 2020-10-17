@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.address.change(function (event) {
+        console.log(event)
+        if (event.value === '/') {
+          $('.logo-pages').css('display', 'none')
+          $('.tag.responsive').css('background', 'rgba(255, 255, 255, 0.5)')
+
+          $('#content').load('src/home.html');
+        } else {
+          $('.logo-pages').css('display', 'block')
+          $('.tag.responsive').css('background', 'none')
+          $('#content').load('src/' + event.value + '.html');
+        }
+      });
+
+      $('.btn-menu-responsive').click(function () {
+        if ($('.menu').css('display') === 'none') {
+          $('.menu').css('display', 'flex');
+          $('.btn-menu-responsive i').removeClass('fa-bars').addClass('fa-times')
+        } else {
+          $('.menu').css('display', 'none');
+          $('.btn-menu-responsive i').removeClass('fa-times').addClass('fa-bars')
+        }
+
+      })
+
+      $('.menu a').click(function () {
+        $('.menu a').removeClass('active');
+        $(this).addClass('active')
+      })
+    });
+
+
+  </script>
+
+  <title>Ovos Santa Clara</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="tags header">
+      <div class="tag responsive">
+        <div class="responsive-logo animate__animated animate__backInLeft">
+          <img src="../img/logo.png" alt="Ovos Santa Clara" />
+        </div>
+        <div class="logo-pages animate__animated animate__backInLeft">
+          <img src="../img/logo.png" alt="Ovos Santa Clara">
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <div class="btn-menu-responsive">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav class="menu animate__animated animate__fadeIn">
+        <a href="/" rel="address:/">Home</a>
+        <a href="/historia" rel="address:/historia">História</a>
+        <a href="/ovos" rel="address:/ovos">Nossos Ovos</a>
+        <a href="#">Blog</a>
+        <a href="https://wa.me/5531997992133" target="_blank">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <div id="content"></div>
+  <footer>
+
+  </footer>
+</body>
+<!--<script src="https://www.powr.io/powr.js?platform=html"></script>-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+
+</html>
