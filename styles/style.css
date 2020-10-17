@@ -306,7 +306,9 @@ footer{
 }
 
 @media screen and (max-width: 970px) {
-
+body{
+  overflow-x: hidden;
+}
   .logo-pages{
     display: none !important;
   }
