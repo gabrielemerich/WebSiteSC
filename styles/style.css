@@ -405,7 +405,8 @@ body{
     margin-top: 7px;
   }
   .responsive-logo img{
-    width: 90px;
+    width: 90px !important;
+    height: 85px !important;
   }
   .tag.responsive{
     background: none;
