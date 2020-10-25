@@ -454,7 +454,21 @@ body{
   }
   .img-header {
     margin-top: 117px !important;
+    width: 92% !important;
+    
   }
+  .img-header img {
+    height: 121px !important;
+  }
+  .segment{
+    width: 92% !important;
+  }
+
+  .segment img {
+    height: 170px !important;
+  }
+
+  
 }
 
 
