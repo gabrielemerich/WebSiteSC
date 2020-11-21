@@ -150,6 +150,18 @@ header .tag {
   border-radius: 5px;
 }
 
+.instafeed{
+  text-align: center;
+  width: 450px;
+}
+.instafeed i {
+  font-size: 33px;
+}
+.instafeed h4 {
+  margin-bottom: 12px;
+  font-weight: bold;
+  margin-top: 7px;
+}
 
 
 .menu a:active{
