@@ -152,7 +152,7 @@ header .tag {
 
 .instafeed{
   text-align: center;
-  width: 450px;
+  width: 30%;
 }
 .instafeed i {
   font-size: 33px;
@@ -407,6 +407,7 @@ body{
   }
   .instafeed{
     margin-bottom: 40px;
+    width: 90%;
   }
   .tags.header.bg{
     display: none;
