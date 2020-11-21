@@ -15,7 +15,6 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $.address.change(function (event) {
-        console.log(event)
         if (event.value === '/') {
           $('.logo-pages').css('display', 'none')
           $('.tag.responsive').css('background', 'rgba(255, 255, 255, 0.5)')
@@ -42,6 +41,8 @@
       $('.menu a').click(function () {
         $('.menu a').removeClass('active');
         $(this).addClass('active')
+        $('.menu').css('display', 'none');
+          $('.btn-menu-responsive i').removeClass('fa-times').addClass('fa-bars')
       })
     });
 
